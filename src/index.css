@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid-areas-content {
+    @apply grid gap-6;
+    grid-template-areas:
+      "bigLeft bigLeft right1 right2"
+      "bigLeft bigLeft bigRight bigRight"
+      "left1 left2 bigRight bigRight";
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .item {
+    @apply relative overflow-hidden;
+    min-height: 200px;
+    @apply flex items-center justify-center;
+  }
+
+  .item img {
+    @apply w-full h-full object-cover;
+  }
+
+  .item p {
+    @apply text-gray-800 dark:text-gray-200 mt-2 text-center;
+    @apply absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-300 ease-in-out;
+  }
+
+  .item:hover p {
+    @apply opacity-100;
+  }
+
+  .grid-area-bigLeft {
+    grid-area: bigLeft;
+  }
+
+  .grid-area-right1 {
+    grid-area: right1;
+  }
+
+  .grid-area-right2 {
+    grid-area: right2;
+  }
+
+  .grid-area-left1 {
+    grid-area: left1;
+  }
+
+  .grid-area-left2 {
+    grid-area: left2;
+  }
+
+  .grid-area-bigRight {
+    grid-area: bigRight;
+  }
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+  .grid-areas-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "bigLeft bigLeft"
+      "right1 right2"
+      "bigRight bigRight"
+      "left1 left2";
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-areas-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bigLeft"
+      "right1"
+      "right2"
+      "bigRight"
+      "left1"
+      "left2";
+  }
+}
