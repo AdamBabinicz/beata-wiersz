@@ -1,0 +1,9 @@
+[build]
+  command = "npm install --force && npm run build"
+  publish = "dist"  # Zmień 'dist' na odpowiedni folder wyjściowy, jeśli używasz innego
+
+[dev]
+  command = "vite"
+  port = 3000
+  targetPort = 3000
+
