@@ -61,7 +61,7 @@ function Hero({ toggleMenu }) {
                 transition={{ delay: 0.8 }}
                 className="text-medium font-bold font-cabin text-[#444444] z-10 max-sm:text-sm"
               >
-                Starting from Rs 50599
+                wybór z tomiku
               </motion.h4>
 
               {/* Price */}
@@ -70,18 +70,18 @@ function Hero({ toggleMenu }) {
                   initial={{ x: "100%", opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1 }}
-                  className="text-2xl font-bold font-roboto text-DarkSecondary dark:text-TextPrimaryColor z-10 max-sm:text-lg"
+                  className="text-xl font-normal font-roboto text-DarkSecondary dark:text-TextPrimaryColor z-10 max-sm:text-lg"
                 >
-                  Rs 53650
+                  "Wiersze
                 </motion.h2>
 
                 <motion.h4
                   initial={{ x: "100%", opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1.6 }}
-                  className="font-normal text-sm font-cabin dark:text-[#F6F6F6B5] text-DarkSecondary line-through z-10 max-sm:text-xs"
+                  className="font-normal text-xl font-cabin dark:text-[#F6F6F6B5] text-DarkSecondary line-through z-10 max-sm:text-xs"
                 >
-                  Rs 60000
+                  antypowabne"
                 </motion.h4>
               </div>
             </div>
