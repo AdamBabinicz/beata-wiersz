@@ -79,7 +79,7 @@ function Hero({ toggleMenu }) {
                   initial={{ x: "100%", opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1.6 }}
-                  className="font-normal text-xl font-cabin dark:text-[#F6F6F6B5] text-DarkSecondary line-through z-10 max-sm:text-xs"
+                  className="font-normal text-xl font-cabin dark:text-[#F6F6F6B5] text-DarkSecondary line-through z-10 max-sm:text-lg"
                 >
                   antypowabne"
                 </motion.h4>
