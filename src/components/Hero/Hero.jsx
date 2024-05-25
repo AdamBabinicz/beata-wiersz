@@ -59,7 +59,7 @@ function Hero({ toggleMenu }) {
                 initial={{ x: "150%" }}
                 whileInView={{ x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="text-medium font-bold font-cabin text-[#444444] z-10 max-sm:text-sm"
+                className="text-medium font-bold font-cabin text-[#a7a7a7] z-10 max-sm:text-sm"
               >
                 wybór z tomiku
               </motion.h4>
