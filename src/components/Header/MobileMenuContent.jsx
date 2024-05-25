@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -7,6 +7,7 @@ import SmoothScrollLink from "../../SmoothScrollLink";
 
 const MobileMenuContent = ({ theme, toggleMenu }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -16,6 +17,19 @@ const MobileMenuContent = ({ theme, toggleMenu }) => {
     setIsDropdownOpen(false);
     toggleMenu();
   };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -63,6 +77,7 @@ const MobileMenuContent = ({ theme, toggleMenu }) => {
         </motion.div>
         {isDropdownOpen && (
           <motion.ul
+            ref={dropdownRef}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}

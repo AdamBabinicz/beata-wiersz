@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMenu } from "react-icons/io5";
 import { TiArrowSortedDown } from "react-icons/ti";
@@ -11,7 +11,8 @@ function Header() {
   const { toggleTheme, theme } = useTheme();
   const [isSearch, setIsSearch] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Stan do kontrolowania widoczności rozwijanego menu
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleSearch = () => {
     setIsSearch(!isSearch);
@@ -28,6 +29,19 @@ function Header() {
   const handleLinkClick = () => {
     setIsDropdownOpen(false);
   };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -77,7 +91,7 @@ function Header() {
               </p>
             </motion.div>
 
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <motion.ul className="text-[3D3D3D] font-cabin font-light tracking-wider flex justify-center items-center gap-10 max-xl:hidden">
                 <motion.li
                   initial={{ y: -150, opacity: 0 }}
