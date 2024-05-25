@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="footer-section md:border-r">
             <h3 className="text-sm:2xl text-xl font-bold mb-4">O Beacie</h3>
             <p className="text-sm:xl">
-              "Nic dla siebie, wszystko dla chwały Bożej i dla ludzi"
+              "Nic dla siebie, wszystko dla chwały Bożej i&nbsp;dla ludzi"
             </p>
           </div>
           <div className="footer-section md:border-r">

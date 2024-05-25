@@ -80,3 +80,14 @@
       "left2";
   }
 }
+
+.flip-p::before {
+  content: "p";
+  display: inline-block;
+  transform: scaleX(-1) skewX(30deg);
+  margin-right: -0.03em; /* Adjust this value as needed */
+  font-style: italic;
+}
+.flip-p {
+  display: inline;
+}

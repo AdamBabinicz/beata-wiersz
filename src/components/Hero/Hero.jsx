@@ -25,7 +25,7 @@ function Hero({ toggleMenu }) {
             <motion.h1
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="text-7xl font-bold font-poppins text-DarkPrimary dark:text-LightPrimary max-xl:text-6xl max-[980px]:text-5xl max-md:text-4xl max-sm:text-3xl sm:pb-5 pb-2"
+              className="text-7xl font-bold font-cabin text-DarkPrimary dark:text-LightPrimary max-xl:text-6xl max-[980px]:text-5xl max-md:text-4xl max-sm:text-3xl sm:pb-5 pb-2"
             >
               "Dobrze, że jesteś"
             </motion.h1>
@@ -49,7 +49,7 @@ function Hero({ toggleMenu }) {
                 initial={{ x: "100%" }}
                 whileInView={{ x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-2xl font-bold font-poppins text-DarkSecondary dark:text-TextPrimaryColor max-sm:text-lg overflow-hidden"
+                className="text-2xl font-bold font-cabin text-DarkSecondary dark:text-TextPrimaryColor max-sm:text-lg overflow-hidden"
               >
                 choć Ciebie nie ma
               </motion.h1>

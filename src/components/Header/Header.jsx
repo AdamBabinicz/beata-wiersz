@@ -67,8 +67,9 @@ function Header() {
               transition={{ delay: 0.1 }}
             >
               <SmoothScrollLink to="start">
-                <h1 className="text-3xl font-bold font-poppins max-sm:text-lg cursor-pointer">
-                  poezja i Muza
+                <h1 className="text-3xl font-bold font-cabin max-sm:text-lg cursor-pointer">
+                  <span className="flip-p"></span>
+                  oezja i Muza
                 </h1>
               </SmoothScrollLink>
               <p className="font-roboto text-sm tracking-wider max-sm:text-xs">

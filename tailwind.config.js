@@ -27,7 +27,7 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
-        cabin: ["Cabin", "sans-serif"],
+        cabin: ["Cabin"],
       },
     },
 
