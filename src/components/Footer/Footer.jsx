@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="footer-section md:border-r">
             <h3 className="text-sm:2xl text-xl font-bold mb-4">Kontakt</h3>
             <a
-              href="https:facebook.com/beata.podymniak.9"
+              href="https://www.facebook.com/beata.podymniak.9"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-500 mr-4 transition-all text-sm:xl"
