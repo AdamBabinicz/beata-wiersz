@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://beata.netlify.app/sitemap.xml
-Host: https://beata.netlify.app
